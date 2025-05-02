@@ -26,7 +26,7 @@ export const getPendingResumes = async (req, res) => {
       .sort('-createdAt');
 
     // Add server URL to file paths
-    const baseUrl = process.env.SERVER_URL || 'https://campuslink-server.onrender.com/api';
+    const baseUrl = process.env.SERVER_URL || 'https://campuslink-server.onrender.com';
     const resumesWithFullUrls = resumes.map(resume => {
       const doc = resume.toObject();
       if (doc.fileUrl) {
@@ -68,7 +68,7 @@ export const getStudentResumes = async (req, res) => {
       .sort('-createdAt');
 
     // Add server URL to file paths
-    const baseUrl = process.env.SERVER_URL || 'https://campuslink-server.onrender.com/api';
+    const baseUrl = process.env.SERVER_URL || 'https://campuslink-server.onrender.com';
     const resumesWithFullUrls = resumes.map(resume => {
       const doc = resume.toObject();
       if (doc.fileUrl) {
